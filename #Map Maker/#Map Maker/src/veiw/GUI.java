@@ -39,11 +39,11 @@ public class GUI extends JFrame{
 			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
 			}; 
 
-	GUI(int k){
+	GUI(){
 		setup();
 	}
 	
-	GUI(){
+	GUI(int k){
 		Floor floor = new Floor();
 		floor.getGrid(boolb);
 		setup();
