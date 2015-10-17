@@ -48,11 +48,6 @@ public class Floor {
 			else{
 				boolean isclear = false;
 				Nroom = new Room();
-				System.out.println("Vert x:" + (Nroom.getVertexCol()) + " Vert Y:" + (Nroom.getVertexrow()));
-				System.out.println("Width: " + Nroom.width + " Height: " + Nroom.height);
-				System.out.println("LeftBound: " + Nroom.L + " RightBound: " + Nroom.R);
-				System.out.println("TopBound: " + Nroom.T + " BotBound: " + Nroom.B);
-
 				//checks to see if it is too close to any of the other rectangles that have already been placed
 				for(int k = 0; k < added.size(); k++){
 					if(Nroom.tooClose(added.get(k))){
