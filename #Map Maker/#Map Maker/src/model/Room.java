@@ -48,8 +48,8 @@ private class Vertex {
 		width = generator.nextInt(2)+2;
 		height = generator.nextInt(2)+2;
 
-		int i = (25 - width);
-		int j = (25 - height);
+		int i = (34 - width);
+		int j = (34 - height);
 		
 		int a = generator.nextInt(i) + (width) + 1;
 		int b = generator.nextInt(j) + (height) + 1;
@@ -81,7 +81,7 @@ private class Vertex {
 
 	//checks borders
 	public boolean tooClose(Room room) {
-		if(L <= room.R + 1 && R+1 >= room.L && T <= room.B + 1 && B+1 >= room.T){			
+		if(L <= room.R + 2 && R+2 >= room.L && T <= room.B + 2 && B+2 >= room.T){			
 		return true;
 		}
 		return false;

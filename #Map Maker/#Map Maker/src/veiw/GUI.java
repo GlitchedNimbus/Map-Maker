@@ -39,13 +39,15 @@ public class GUI extends JFrame{
 			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
 			}; 
 
-	GUI(){
+	int[][] board = new int[40][40];
+	
+	GUI(int k){
 		setup();
 	}
 	
-	GUI(int k){
+	GUI(){
 		Floor floor = new Floor();
-		floor.getGrid(boolb);
+		floor.getGrid(board);
 		setup();
 }
 	
@@ -53,11 +55,11 @@ private void setup(){
 this.setTitle("Map Graph");
 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 this.setVisible(true);
-this.setSize(500,500);
+this.setSize(617,640);
 
-graphpanel board = new graphpanel(boolb);
+graphpanel board = new graphpanel(this.board);
 this.add(board);
-board.setSize(100,100);
+board.setSize(500,500);
 board.repaint();
 	}
 }
